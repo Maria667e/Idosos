@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança Digital Sênior</title>
+    <style>
+        /* Variáveis de cores de alto contraste e tamanhos para acessibilidade */
+        :root {
+            --cor-fundo: #F0F4F8; /* Fundo cinza/azulado bem claro, descansa a visão */
+            --cor-texto: #1A202C; /* Quase preto para máximo contraste */
+            --cor-primaria: #0A4275; /* Azul escuro para títulos e destaques */
+            --cor-fundo-cartao: #FFFFFF; /* Fundo branco para os textos */
+            --cor-alerta: #9B2C2C; /* Vermelho escuro para alertas */
+            --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Configurações gerais focadas em legibilidade (Letras grandes) */
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: var(--fonte-principal);
+            font-size: 18px; /* Tamanho base maior para facilitar leitura */
+            line-height: 1.6; /* Espaçamento entre linhas maior */
+            padding: 20px;
+        }
+
+        /* Container principal para centralizar o conteúdo */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Introdução */
+        .introducao {
+            background-color: var(--cor-fundo-cartao);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 8px solid var(--cor-primaria);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .introducao h2 {
+            color: var(--cor-primaria);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Lista de Dicas (Cartões) */
+        .dicas-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .cartao-dica {
+            background-color: var(--cor-fundo-cartao);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Estilos do Título do Cartão */
+        .cartao-dica h3 {
+            color: var(--cor-primaria);
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid var(--cor-fundo);
+            padding-bottom: 10px;
+        }
+
+        .cartao-dica p {
+            font-size: 1.2rem;
+            color: var(--cor-texto);
+        }
+
+        .alerta {
+            color: var(--cor-alerta);
+            font-weight: bold;
+            background-color: #FFF5F5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border-left: 5px solid var(--cor-alerta);
+        }
+
+        /* Ícones feitos com CSS/Emojis para evitar dependências externas */
+        .icone {
+            font-size: 2.5rem;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #4A5568;
+            font-size: 1.1rem;
+        }
+
+        /* Foco para acessibilidade com teclado */
+        *:focus {
+            outline: 4px solid var(--cor-primaria);
+            outline-offset: 4px;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .cartao-dica h3 {
+                font-size: 1.4rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança Digital Sênior</title>
+    <style>
+        /* Variáveis de cores de alto contraste e tamanhos para acessibilidade */
+        :root {
+            --cor-fundo: #F0F4F8; /* Fundo cinza/azulado bem claro, descansa a visão */
+            --cor-texto: #1A202C; /* Quase preto para máximo contraste */
+            --cor-primaria: #0A4275; /* Azul escuro para títulos e destaques */
+            --cor-fundo-cartao: #FFFFFF; /* Fundo branco para os textos */
+            --cor-alerta: #9B2C2C; /* Vermelho escuro para alertas */
+            --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Configurações gerais focadas em legibilidade (Letras grandes) */
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: var(--fonte-principal);
+            font-size: 18px; /* Tamanho base maior para facilitar leitura */
+            line-height: 1.6; /* Espaçamento entre linhas maior */
+            padding: 20px;
+        }
+
+        /* Container principal para centralizar o conteúdo */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Introdução */
+        .introducao {
+            background-color: var(--cor-fundo-cartao);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 8px solid var(--cor-primaria);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .introducao h2 {
+            color: var(--cor-primaria);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Lista de Dicas (Cartões) */
+        .dicas-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .cartao-dica {
+            background-color: var(--cor-fundo-cartao);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Estilos do Título do Cartão */
+        .cartao-dica h3 {
+            color: var(--cor-primaria);
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid var(--cor-fundo);
+            padding-bottom: 10px;
+        }
+
+        .cartao-dica p {
+            font-size: 1.2rem;
+            color: var(--cor-texto);
+        }
+
+        .alerta {
+            color: var(--cor-alerta);
+            font-weight: bold;
+            background-color: #FFF5F5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            border-left: 5px solid var(--cor-alerta);
+        }
+
+        /* Ícones feitos com CSS/Emojis para evitar dependências externas */
+        .icone {
+            font-size: 2.5rem;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #4A5568;
+            font-size: 1.1rem;
+        }
+
+        /* Foco para acessibilidade com teclado */
+        *:focus {
+            outline: 4px solid var(--cor-primaria);
+            outline-offset: 4px;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .cartao-dica h3 {
+                font-size: 1.4rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Cabeçalho do App -->
+        <header>
+            <h1>Guia de Segurança Digital</h1>
+            <p>Dicas
+<body>
+
+    <div class="container">
+        
+        <!-- Cabeçalho do App -->
+        <header>
+            <h1>Guia de Segurança Digital</h1>
+            <p>Dicas
